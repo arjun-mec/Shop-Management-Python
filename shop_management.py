@@ -150,7 +150,7 @@ def sign_in(user: str = "customer" or "employee") -> bool:
 
 def customer_register():
     try:
-        os.system("cls")
+        console.clear()
         console.print(
             Panel.fit(
                 Text("CUSTOMER REGISTRATION", style="heading", justify="center"),
@@ -205,7 +205,7 @@ def customer_register():
 
 def employee_register():
     try:
-        os.system("cls")
+        console.clear()
         console.print(
             Panel.fit(
                 Text("EMPLOYEE REGISTRATION", style="heading", justify="center"),
@@ -339,7 +339,7 @@ def bill_table_create(cart):
 
 def bill(cart, dt, sub_total, tax, total_cost):
     try:
-        os.system("cls")
+        console.clear()
         console.print(f"{'Your Bill': ^60}", style="BOLD RED")
         q = "SELECT customer_name FROM customer_table WHERE email = '{}'".format(email)
         cursor.execute(q)
@@ -446,7 +446,7 @@ def search_buy():
 
     try:
         while True:
-            os.system("cls")
+            console.clear()
             console.print(
                 Panel.fit(
                     Text("SEARCH AND BUY", style="heading", justify="center"),
@@ -518,7 +518,8 @@ def search_buy():
 def confirm_purchase():
     global items, cart, itemnos_in_cart
 
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("CONFIRMATION MENU", style="heading", justify="center"), style="border"
@@ -591,7 +592,8 @@ def confirm_purchase():
 
 
 def edit_quantity(items, cart):
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("EDIT QUANTITY", style="heading", justify="center"), style="border"
@@ -661,7 +663,8 @@ def buy():
         global cart, itemnos_in_cart
         search_buy()
         while True:
-            os.system("cls")
+            console.clear()
+
             console.print(
                 Panel.fit(
                     Text("SHOPPING MENU", style="heading", justify="center"),
@@ -681,7 +684,8 @@ def buy():
 
             elif ch == "Edit your cart":
                 while True:
-                    os.system("cls")
+                    console.clear()
+
                     console.print(
                         Panel.fit(
                             Text("EDIT CART", style="heading", justify="center"),
@@ -718,7 +722,8 @@ def buy():
 
 
 def item_insert():
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("INSERT ITEM", style="heading", justify="center"), style="border"
@@ -771,7 +776,8 @@ def remove_item():
 def view_items():
     try:
         while True:
-            os.system("cls")
+            console.clear()
+
             console.print(
                 Panel.fit(
                     Text("VIEW MENU", style="heading", justify="center"), style="border"
@@ -850,7 +856,8 @@ def view_items():
 
 
 def edit_items():
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(Text("EDIT ITEM", style="heading", justify="center"), style="border"),
         justify="center",
@@ -891,7 +898,8 @@ def search():
         for i in cursor.fetchall():
             items_names.append(i[0])
         while True:
-            os.system("cls")
+            console.clear()
+
             console.print(
                 Panel.fit(
                     Text("SEARCH", style="heading", justify="center"), style="border"
@@ -927,7 +935,8 @@ def search():
 
 def edit_customer(rec):
     global email
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("EDIT CUSTOMER ACCOUNT", style="heading", justify="center"),
@@ -1000,7 +1009,8 @@ def edit_customer(rec):
 
 
 def change_pass(user):
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("CHANGE PASSWORD", style="heading", justify="center"), style="border"
@@ -1072,7 +1082,8 @@ def change_pass(user):
 
 def orders(rec):
     try:
-        os.system("cls")
+        console.clear()
+
         console.print(
             Panel.fit(
                 Text("VIEW PAST ORDERS", style="heading", justify="center"),
@@ -1114,7 +1125,8 @@ def orders(rec):
 
 
 def delete_account(user, rec):
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("DELETE ACCOUNT", style="heading", justify="center"), style="border"
@@ -1168,7 +1180,8 @@ def delete_account(user, rec):
 def account_stats(rec):
     try:
         if len(eval(rec[3])) != 0:
-            os.system("cls")
+            console.clear()
+
             console.print(
                 Panel.fit(
                     Text("ACCOUNT STATS", style="heading", justify="center"),
@@ -1233,7 +1246,8 @@ def account_stats(rec):
 def customer_account():
     try:
         while True:
-            os.system("cls")
+            console.clear()
+
             console.print(
                 Panel.fit(
                     Text("CUSTOMER ACCOUNT", style="heading", justify="center"),
@@ -1278,7 +1292,8 @@ def customer_account():
 
 def edit_employee(rec):
     global email
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("EDIT EMPLOYEE ACCOUNT", style="heading", justify="center"),
@@ -1332,7 +1347,8 @@ def edit_employee(rec):
 def employee_account():
     while True:
         try:
-            os.system("cls")
+            console.clear()
+
             console.print(
                 Panel.fit(
                     Text("EMPLOYEE ACCOUNT", style="heading", justify="center"),
@@ -1372,7 +1388,8 @@ def employee_account():
 
 
 while True:
-    os.system("cls")
+    console.clear()
+
     console.print(
         Panel.fit(
             Text("SHOP MANAGEMENT", style="heading", justify="center"),
@@ -1391,7 +1408,8 @@ while True:
         email, x = sign_in("customer")
         if x:
             while True:
-                os.system("cls")
+                console.clear()
+
                 console.print(
                     Panel.fit(
                         Text("CUSTOMER MENU", style="heading", justify="center"),
@@ -1438,7 +1456,8 @@ while True:
         email, x = sign_in("employee")
         if x:
             while True:
-                os.system("cls")
+                console.clear()
+
                 console.print(
                     Panel.fit(
                         Text("EMPLOYEE MENU", style="heading", justify="center"),
@@ -1484,7 +1503,8 @@ while True:
 
     elif ch == "Register":
         while True:
-            os.system("cls")
+            console.clear()
+
             console.print(
                 Panel.fit(
                     Text("REGISTRATION MENU", style="heading", justify="center"),
