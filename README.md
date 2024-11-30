@@ -2,6 +2,8 @@
 
 This is a Python-based online supermarket application that utilizes MySQL as a database and provides a command-line interface (CLI) for user interaction.
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/arjun-mec/Shop-Management-Python?quickstart=1)
+
 ### Features
 
 - **User Authentication:** Customers and employees can register with unique credentials and securely log in.
